@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ahmedmuhipipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ahmedmuhipipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: ahmedmuhipipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: ahmedmuhipipelinesjavascriptdocker 
+          image: iamachscontainerregistry.azurecr.io/ahmedmuhipipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
